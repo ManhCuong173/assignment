@@ -1,0 +1,227 @@
+
+.container-fluid{
+  width:100%;
+  height: 100vh;
+  background:url(./../../assets/background-home-page.png);
+  background-repeat: no-repeat;
+  font-size:0.75rem;
+  overflow:hidden;
+}
+#navigation{
+  height: 10%;
+  width: 100%;
+  padding-top:10px;
+}
+  #navigation #brand-logo{
+    align-items: end;
+    display: flex;
+    justify-content: center;
+  }
+  div#navigation-list-choosen {
+    padding-top: 25px;
+  }
+  #navigation-list-choosen a{
+    float:right;
+    margin-left:30px;
+    font-size:0.8rem;
+  }
+  #navigation-list-choosen a:nth-child(6){
+    background:white;
+    border-color:#f4dc93;
+    color:black;
+  }
+  #navigation-list-choosen a:nth-child(6):hover{
+    border-color:black
+  }
+  #navigation-list-choosen a:last-child{
+    background:#f4dc93;
+    border-color:#f4dc93;
+    color:black;
+  }
+  #navigation-list-choosen a:last-child:hover{
+    background:rgb(212, 184, 89);
+    color:white;
+  }
+  #navigation-list-choosen a:first-child:hover + ul{
+    opacity: 1;
+  }
+  #navigation-list-choosen-ul{
+    position: absolute;
+    right:0px;
+    top: 90px;
+    list-style-type: none;
+    background: #217f8c;
+    opacity: 0;
+    color: white;
+    border-radius: 15px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-left:15px;
+    padding-bottom: 25px;
+    z-index:1000;
+    transition: all ease-in-out 0.7s;
+    height: 400px;
+    overflow-y: auto;
+    
+  }
+
+/* 
+  #navigation-list-choosen-ul:after{
+    position: absolute;
+    transform: translateX(80%);
+    right:0;
+    top:0;
+    content:'';
+    clip-path: polygon(0 0, 0% 100%, 100% 55%);
+    background:#217f8c;
+    width:50px;
+    height:100%;;
+  } */
+  #navigation-list-choosen-ul i{
+    float:right;
+  }
+  #navigation-list-choosen-ul li {
+    padding-top:10px;
+    border-bottom:1px solid white;
+    width:100px;
+  }
+  #navigation-list-choosen-ul:hover{
+    opacity: 1;
+  }
+  #navigation-list-choosen-ul li:hover{
+    opacity:0.8;
+    cursor:pointer;
+  }
+    #navigation-list-choosen-ul li:hover>i{
+      color:rgb(240, 179, 66);
+    }
+
+  #favicon{
+    float:right;
+  }
+#body-content{
+  height: 90%;
+}
+  #body-content-left{
+    position: relative;
+  }
+  #body-content-left-form{
+    position: absolute;
+    width:50%;
+    height:70%;
+    left:180px;
+    top:100px;
+    margin: auto;
+    border-radius:50px;
+    box-shadow: 8px 8px 3px #a9a9a99e;
+    cursor: pointer;
+  }
+  #body-content-left-form:hover{
+    box-shadow: 10px 10px 5px darkgrey;
+  }
+  #body-content-left-form h1 {
+    padding-top:40px;
+  }
+  #body-content-left-form p:nth-child(2) {
+    margin:0;
+    padding-right:10px;
+  }
+  #body-content-left-form p:nth-child(3){
+    margin: 0;
+    padding-right:10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #body-content-left-form h1 span {
+    color: #758577;
+    font-family: 'Rouge Script', cursive;
+    font-size: 38px; font-weight: normal;
+    line-height: 48px;
+    margin: 0 0 50px;
+    text-shadow: 1px 1px 2px #082b34;
+    border-bottom: 2px solid grey;
+    padding-bottom: 10px
+  }
+  #body-content-left-form #button-group{
+    position: absolute;
+    width:100%;
+    bottom:50px;
+    left:20px;
+  }
+  #body-content-left-form #button-group button{
+    width: 80%;
+    border-radius: 30px!important;
+    font-size: 38px;
+    font-weight: 0;
+    color: white;
+    font-family: 'Rouge Script', cursive;
+    padding: 20px 0 5px 0;
+  }
+  #body-content-left-form #button-group button:hover{
+    background:white;
+    color: #217f8c;
+    box-shadow: 3px 3px 3px #1a1a1a;
+    
+  }
+  #body-content-right{
+    padding-top:4%;
+  }
+  #body-content-right img{
+    position: relative;
+    max-width: 130%;
+    height: auto;
+    transform: translateX(-35%);
+  }
+.col-lg-4, .col-lg-7, .col-lg-1{
+  height: 90%;
+}
+  .col-lg-7 img {
+    padding-top:100px;
+    width:auto;
+    height: 677.91px;
+    float:right
+  }
+  footer{
+    height:10%;
+    width:90%;
+    margin:auto;
+  }
+  footer div{
+    float:right;
+    height:25px;
+    width:25px;
+    border-radius: 50%;
+    margin-right:15px;
+  }
+  footer div:nth-child(1) {
+    background:#bcd3d2;
+  }
+  footer div:nth-child(2) {
+    background:#bbcdcc;
+  }
+  footer div:nth-child(3) {
+    background:#75aaa9;
+  }
+  /*
+  General Class
+  */
+  .background-white{
+    background:#ffff;
+  }
+  .background-button{
+    background-color:#217f8c;
+    border-color: #217f8c;
+    color:white;
+    border-radius:25px;
+  }
+  .background-button:hover{
+    background:white;
+    color:#217f8c;
+  }
+/*
+  General class
+*/
+::-webkit-scrollbar {
+  width: 10px;
+}

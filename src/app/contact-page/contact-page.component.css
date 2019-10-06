@@ -1,0 +1,187 @@
+.container-fluid {
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+#navigation {
+    height: 25%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+#navigation #brand-logo {
+    align-items: end;
+    display: flex;
+    justify-content: center;
+}
+
+div#navigation-list-choosen {
+    padding-top: 25px;
+}
+
+#navigation-list-choosen a {
+    float: right;
+    margin-left: 30px;
+    font-size: 0.8rem;
+    background: #217f8c;
+    color: white;
+    border-radius: 25px;
+}
+
+#navigation-list-choosen a:hover {
+    color: #217f8c;
+    background: white;
+    border: 1px solid #217f8c;
+}
+
+.contact-and-questions {
+    position: relative;
+    width: 90%;
+    height: 73%;
+    background: #217f8c;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 11px 9px 9px lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.contact-and-questions>div {
+    width: 50%;
+}
+
+.contact-and-questions>div:first-child input {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 15%;
+    background: none;
+    border: 0;
+    height: 10%;
+    border: 1px solid #ffff;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+.contact-and-questions>div:first-child input:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+.contact-and-questions>div:first-child input::placeholder {
+    color: white;
+    padding-left: 10px;
+    font-family: 'Rouge Script', cursive;
+}
+
+.contact-and-questions>div:first-child textarea {
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 15%;
+    background: none;
+    border: 0;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 15%;
+    background: none;
+    border: 0;
+    height: 30%;
+    border: 1px solid #ffff;
+    border-radius: 10px;
+    color: white;
+    resize: vertical;
+    overflow: auto;
+    padding-left: 10px;
+}
+
+.contact-and-questions>div:first-child textarea::placeholder {
+    color: white;
+    padding-left: 10px;
+    font-family: 'Rouge Script', cursive;
+}
+
+.contact-and-questions>div:first-child textarea:focus {
+    outline: none;
+    transform: scale(1.1);
+}
+
+
+/*
+    Peusodo class
+  */
+
+.contact-and-questions::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: white;
+    z-index: 1;
+}
+
+.contact-and-questions::before {
+    content: 'CONTACT';
+    font-size: 28px;
+    font-family: 'Rouge Script', cursive;
+    position: absolute;
+    top: 1%;
+    left: 44%;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    background: #217f8c;
+    z-index: 2;
+    padding: 0 10px;
+}
+
+#right-side-wrapper {
+    position: relative;
+    border: 1.5px solid #ffff;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    color: white;
+    padding: 20px 10px;
+}
+
+#right-side-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 62.5%;
+    height: 1.5px;
+    background: #ffff;
+    top: -10px;
+    left: 25%;
+}
+
+#right-side-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 11.5%;
+    background: #ffff;
+    top: -50px;
+    right: 12.5%;
+}
+
+#submit input {
+    width: 30%;
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#submit input:first-child {
+    margin-left: 18%;
+    background: #ffffff6b;
+    color: #217f8c;
+}

@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <header id="navigation" class='row' style='padding:0; margin:0;'>
+
+  </header>
+  <section id='body-content' class='row'>
+    <div class="col-lg-12">
+      <div id="body-content-control-bar">
+        <ul id='pagination'>
+          <li><a href="javascript:void(0)"><i class="fas fa-arrow-circle-left" (click)=prevBtn()></i></a></li>
+          <li><a href="javascript:void(0)"><i class="fas fa-arrow-circle-right" (click)=nextBtn()></i></a></li>
+        </ul>
+      </div>
+      <div id='body-content-frame' class='row'>
+        <div class='col-lg-4' id='body-content-left-side'>
+          <div class="c100 p25 small">
+            <span>25%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div id="list-question-done">
+            <span id='number-question-done'>Câu hỏi số :
+              <strong> {{ currentPage }} / {{ questionsArrLength }}</strong> </span>
+            <ul class="pagination">
+              <li class="page-item" ><a class="page-link" href="javascript:void(0)"
+                 ></a></li>
+            </ul>
+          </div>
+          <div id="question" *ngFor='let item of questions | paginate: { itemsPerPage: 1, currentPage: currentPage}'>
+            {{ item.Text }}
+            <ul style='list-style-type: none;'>
+              <li class='mb-2' *ngFor='let answer of item.Answers'>
+                <label for="muhRadio1">
+                  <input type="radio" name = "answer" value="answer.Id" (click) = "sendCorrectAnswer(item.AnswerId, answer.Id,item.Id,numberForOptimize)"/> {{answer.Text}}
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div id="multiply-choice">
+            <div id="clock">
+              <i class="fas fa-history"></i> {{ timeStarted }}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

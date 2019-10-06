@@ -1,0 +1,77 @@
+.container-fluid{
+  width:100%;
+  height: 100vh;
+  background:url(./../../assets/background-home-page.png);
+  background-repeat: no-repeat;
+  font-size:0.75rem;
+  overflow:hidden;
+  padding:0;
+}
+#navigation{
+  height: 25%;
+  width: 100%;
+  padding-top:10px;
+}
+  #navigation #brand-logo{
+    align-items: end;
+    display: flex;
+    justify-content: center;
+  }
+  div#navigation-list-choosen {
+    padding-top: 25px;
+  }
+  #navigation-list-choosen a{
+    float:right;
+    margin-left:30px;
+    font-size:0.8rem;
+    background:#217f8c;
+    color:white;
+    border-radius:25px;
+  }
+  #navigation-list-choosen a:hover{
+    color: #217f8c;
+    background:white;
+    border: 1px solid #217f8c;
+  }
+
+  /*
+    Section body
+  */
+  section{
+    height:75%;
+    margin:auto;
+    width:100%;
+   
+  }
+  .item{
+    width:70%;
+    margin-left:15%;
+  }
+    #admins{
+      width:80%;
+      height:100%;
+      display:flex;
+      margin:auto;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+      .admins-item{
+        width:24%;
+        text-align: center;
+        background:#539c958c;
+        height:60%;
+        margin-left:25px;
+        border-radius:10px;
+      }
+        .admins-item img{
+          border-radius:50%;
+          width:90px;
+          height: 90px;
+        }
+  /*
+    General class
+  */
+  .font-template-2{
+    font-family: 'Rouge Script', cursive;
+  }

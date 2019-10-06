@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <header id="navigation" class='row'>
+        <div class="col-lg-4" id='brand-logo'>
+            <a href="" class='py-3' id='favicon'>
+                <img src="./../../assets/logo-favicon.png" alt="" width="120px;" height="120px;" class='rounded-circle'>
+            </a>
+        </div>
+        <div class="col-lg-8 pr-5" id='navigation-list-choosen'>
+            <a [routerLink]="['about']" class='btn background-button py-3'>ABOUT</a>
+            <a [routerLink]="['contact']" class='btn background-button py-3'>CONTACT</a>
+            <a href="" class='btn background-button py-3'>REPORT</a>
+            <a [routerLink]="['user/register']" class='btn background-button py-3'>SIGN UP</a>
+            <a [routerLink]="['user/login']" class='btn background-button py-3'>SIGN IN</a>
+        </div>
+    </header>
+    <div class="contact-and-questions row">
+        <div>
+            <h3><strong>Report For Us</strong></h3>
+            <input type="text" placeholder="Tên môn học:">
+            <input type="text" placeholder="Email...">
+            <textarea placeholder="Do you have any question for this subject?"></textarea>
+            <div id='submit'>
+                <input type="button" value='Report'>
+                <input type="reset" value='Reset'>
+            </div>
+        </div>
+        <div>
+            <h3><strong>Please choose subject</strong></h3>
+            <div id="right-side-wrapper">
+                <div id="list-subjects">
+                    <div class="item">
+                        <img src="./../../assets/logos/ADAV.jpg" alt="">
+                        <div class='infor'>
+                            <p>Tên môn học:
+                                <Strong>Lập trình Android nâng cao</Strong>
+                            </p>
+                            <p>
+                                Mã môn học:
+                                <strong>ADAV</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./../../assets/logos/ADAV.jpg" alt="">
+                        <div class='infor'>
+                            <p>Tên môn học:
+                                <Strong>Lập trình Android nâng cao</Strong>
+                            </p>
+                            <p>
+                                Mã môn học:
+                                <strong>ADAV</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./../../assets/logos/ADAV.jpg" alt="">
+                        <div class='infor'>
+                            <p>Tên môn học:
+                                <Strong>Lập trình Android nâng cao</Strong>
+                            </p>
+                            <p>
+                                Mã môn học:
+                                <strong>ADAV</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div id='footer'>
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right ml-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

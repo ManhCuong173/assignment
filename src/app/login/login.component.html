@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <header id="navigation" class='row'>
+    <div class="col-lg-6" id='navigation-left-side'>
+      <a href="" id='logo-brand'>
+        <i> C' </i>
+      </a>
+      <input type="text" placeholder="Search..." id='navigation-search-button' class='ml-4 mt-3'>
+    </div>
+    <div class="col-lg-6 font-template" id='navigation-list-choosen'>
+      <a [routerLink] = "['/contact']" class='btn background-button py-3'>
+        REPORT
+      </a>
+      <a [routerLink] = "['/user/register']" class='btn background-button py-3'>SIGN UP</a>
+      <a [routerLink] = "['']" class='btn background-button py-3'>HOME</a>
+    </div>
+  </header>
+  <div id="hr"></div>
+  <section id='body' class='row'>
+    <div class="col-lg-6">
+      <div id="body-content-left-form">
+        <h1 class='mb-5'>
+          <span class='pt-4' class='font-template-2'>Register Now !</span>
+        </h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, natus molestias illo labore alias sunt ipsam odit veniam vitae accusamus repellat! Quae deserunt similique maxime id magni, ex dolores voluptate!
+          Lorem, ipsum dolor sit amet consectetur 
+        </p>
+        <p class='mb-4'>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, natus molestias illo labore alias sunt ipsam odit veniam vitae accusamus repellat! Quae deserunt similique maxime id magni, ex dolores voluptate!
+        </p>
+        <header id='body-content-left-header'>
+          <span>
+            If you dont have account? Register now 
+          </span>
+          <p></p>
+          <a class='rounded-lg' (click) = "toggle()">REGISTER</a>
+        </header>
+      </div>
+    </div>
+    <div id='body-content-right' class="col-lg-6">
+      <div [@changePosition] ="stateChange" id="body-content-right-form" [ngStyle] = "currentStyle">
+        <header>
+          <i class="fas fa-user"></i> Sign in
+        </header>
+        <div id='hr-form'></div>
+        <section id="body-content-right-form-section">
+          <form class='form'>
+            <input type="text" id='username' class=' mb-3 py-2 mt-3 ' autocomplete="off" placeholder=" ">
+            <label for="username" >Username</label>            
+            <input type="text" id='password' class=' mb-3 py-2 ' autocomplete="off" placeholder=" ">
+            <label for="password" >Password</label>
+            <button id='submit-form' class='btn py-1 rounded-lg' (click) = navigateToListSubject()> Sign In</button> 
+          </form>
+        </section>
+        <footer>
+          <i class="fab fa-facebook-f ml-4"></i>
+          <i class="fab fa-instagram ml-4"></i>
+          <i class="fab fa-twitter ml-4"></i>
+          <i class="fab fa-google-plus-g ml-4"></i>
+          <a [routerLink]="['/user/forgot']" class='ml-2 'style='font-size: 15px;color:white'>Forgot password?</a>
+        </footer>
+      </div>
+    </div>
+  </section>
+</div>

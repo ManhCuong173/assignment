@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <header id="navigation" class='row'>
+        <div class="col-lg-4" id='brand-logo'>
+          <a href="" class= 'py-3' id='favicon'>
+            <img src="./../../assets/logo-favicon.png" alt="" width="120px;" height="120px;" class='rounded-circle'>
+          </a>
+        </div>
+        <div class="col-lg-8 pr-5" id='navigation-list-choosen'>
+            <a [routerLink] = "['about']" class='btn background-button py-3'>ABOUT</a>
+            <a [routerLink] = "['contact']" class='btn background-button py-3'>CONTACT</a>
+            <a href="" class='btn background-button py-3'>REPORT</a>
+            <a [routerLink] = "['user/register']" class='btn background-button py-3'>SIGN UP</a>
+            <a [routerLink] = "['user/login']" class='btn background-button py-3'>SIGN IN</a>
+        </div>
+      </header>
+  <div class="contact-and-questions row">
+    <div>
+      <input type="text" placeholder="Username...">
+      <input type="text" placeholder="Email...">
+      <textarea placeholder="Do you have any question for us?"></textarea>
+      <div id='submit'>
+          <input type="button" value='Send'>
+          <input type="reset" value='Reset'>
+      </div>
+    </div>
+    <div>
+      <div id="right-side-wrapper">
+        <p>
+          Website: <strong>https://kiemtraonline.itc.edu.vn</strong>
+        </p>  
+        <p>  
+          Admin: <strong> Mr.Đào Mạnh Cường</strong>
+        </p>  
+        <p>  
+          Role: <strong>Highest</strong>
+        </p>
+        <p>
+          Address: <strong>688 street Lê Đức Thọ, district Gò Vấp, city Hồ Chí Minh</strong>
+        </p>
+        <p>
+          Contact for work: <strong>0929998387</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,331 @@
+*{
+  box-sizing:none;
+}
+.container-fluid{
+  padding:0;
+  width:100vw;
+  height: 100vh;
+  overflow:hidden;
+  background:url(./../../assets/login-page/background.jpg);
+  background-repeat: no-repeat;
+  background-size:100% 722px;
+}
+
+
+/*
+  Header
+*/
+#navigation{
+  height: 11%;
+  width: 100%;
+}
+  div#navigation-left-side{
+    padding: 0 0 0 150px;
+  }
+    #logo-brand{
+      text-decoration: none;
+      float: left;
+      padding:0 10px 0 10px;
+      background: #00000021;
+      text-align: center;
+      border-radius: 50%;
+      color: #ffff;
+      font-family: 'Rouge Script', cursive;
+      font-size: 45px;
+    }
+  div#navigation-list-choosen {
+    padding-top: 13px;
+    font-size:14px;
+    display: flex;
+    justify-content: center
+  }
+  #navigation-search-button{
+    color:white;
+    background:none;
+    border:none;
+    padding:10px 0 5px 0 ;
+    border-bottom: 1px solid #ffff;
+    font-size: 14px;
+  }
+  #navigation-list-choosen a{
+    float:right;
+    margin-left:30px;
+    color:#f8f9faeb;
+    font-size:14px;
+  }
+  #navigation-list-choosen a:hover{
+    color:grey;
+  }
+  #navigation-list-choosen a:first-child:hover + ul{
+    opacity: 1;
+    z-index:1001;
+  }
+  #navigation-list-choosen-ul{
+    position: absolute;
+    right: -20px;
+    top: 90px;
+    list-style-type: none;
+    opacity: 0;
+    color: white;
+    border-radius: 15px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-left:15px;
+    padding-bottom: 25px;
+    z-index:1000;
+    transition: all ease-in-out 0.7s;
+  }
+
+  #navigation-list-choosen-ul:after{
+    position: absolute;
+    transform: translateX(80%);
+    right:0;
+    top:0;
+    content:'';
+    clip-path: polygon(0 0, 0% 100%, 100% 55%);
+    width:50px;
+    height:100%;;
+  }
+  #navigation-list-choosen-ul i{
+    float:right;
+  }
+  #navigation-list-choosen-ul li {
+    padding-top:10px;
+    border-bottom:1px solid white;
+    width:100px;
+  }
+  #navigation-list-choosen-ul:hover{
+    opacity: 1;
+  }
+  #navigation-list-choosen-ul li:hover{
+    cursor:pointer;
+  }
+    #navigation-list-choosen-ul li:hover>i{
+      color:black;
+    }
+  
+  /*
+    Section body
+  */
+  #body{
+    width:100%;
+    height:80vh;
+  }
+  #body>div{
+    height:100%;
+    overflow:hidden;
+  }
+  /*
+    Body left side
+  */
+  #body-content-left-form{
+    height:80%;
+    width:60%;
+    color:white;
+    margin-top:60px!important;
+    margin: auto;
+    animation-name: translateXAxisLeftSide;
+    animation-duration: 2s; 
+  }
+
+  @keyframes translateXAxisLeftSide {
+    0% {transform:translateX(-100%)}
+    100%{transform: translateX(0)}
+   }
+    /*
+      Animation body-content-left-form
+    */
+
+  #body-content-left-form p{
+    border-left: 1px solid #ffff;
+    padding: 0 0px 30px 30px!important;
+    margin: 0;
+    font-size:0.8rem;
+  }
+  /*
+    Body right side
+  */
+    
+  #body-content-right-form{
+    position: relative;
+    height:80%;
+    width:60%;
+    margin: auto;
+    color:white;
+    z-index:1000;
+    cursor: pointer;
+    margin-top:60px!important;
+    overflow:hidden;
+    animation-name: translateXAxisRightSide;
+    animation-duration: 2s; 
+  }
+
+  @keyframes translateXAxisRightSide {
+    0% {transform:translateX(100%)}
+    100%{transform: translateX(0)}
+   }
+  #body-content-right-form:hover{
+    border-color: transparent;
+    border-width: 4px;
+    border-style: solid;
+  }
+  #body-content-right-form:hover>#hr-form{
+    transform: translateX(150%);
+    transition: all ease-out 0.9s;
+  }
+  #body-content-right-form:after{
+    content:'';
+    position: absolute;
+    right:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0.2;
+    z-index:-1;
+  }
+  #body-content-left-header{
+    font-size:16px!important;
+  }
+  #body-content-left-header p{
+    margin:0;
+    padding:0;
+    border:none;
+  }
+  #body-content-left-header a{
+    display: block;
+    width:90%;
+    background:#0000004a;
+    padding:3px 0 3px 0;
+    cursor:pointer;
+    text-decoration: none;
+    color:white;
+  }
+  #body-content-left-header a:hover{
+    font-weight: unset;
+    background:#3c638c;
+    border-color:#3c638c;
+    color:white;
+  }
+  /*
+    Section body > Login form
+  */
+    #body header{
+      height:18%;
+      text-align: center;
+      padding-top:20px;
+      font-size:35px;
+    }
+
+    #body section{
+      height:72%;
+    }
+      #body section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      #body section form{
+        width:90%;
+        height:80%;
+        margin:auto;
+      }
+        #body section form input{
+          height: 55px;
+          cursor: pointer;
+          background-color:transparent;
+          border:none;
+          border-bottom:1px solid #ffffff6b;
+          width: 100%;
+          padding-left:10px;
+        }
+
+        #body section form label{
+          position: relative;
+          font-style: italic;
+          transform:translate(10px,-55px);
+          font-size:22px;
+          transition: all ease-out 0.5s;
+          cursor: pointer;
+        }
+        #body section form button{
+          font-size:26px;
+          position: absolute;
+          bottom:55px;
+          width:90%;
+          left:20px;
+          font-weight: unset;
+          background:#3c638c;
+          border-color:#3c638c;
+          color:white;
+        }
+        #body section form button a {
+          color:white;
+          text-decoration: none;
+        }
+        #body footer {
+          width:100%;
+          text-align:center;
+          font-size:26px;
+        }
+        /*
+        Animation input
+        */
+        #body-content-right-form-section form input:focus+label{
+          transform: translate(0px,-100px);
+          font-size:15px;
+        }
+        #body-content-right-form-section form input:not(:placeholder-shown)+label{
+          transform: translate(0px,-100px);
+          font-size:15px;
+        }
+        #body section form input:hover{
+          background:#0d0c0c0f;
+        }
+        #body section form input:focus{
+          outline: none;
+          border:none;
+        }
+
+    #body footer{
+      height: 10%;
+    }
+
+    #body footer i{
+      font-size:18px;
+    }
+    #body-content-right-form-section input{
+      background: #3c638ced;
+      border-color:#3c638ced;;
+      color:white; 
+    }
+
+    /*
+    General class
+    */
+    .font-template{
+      font-family: Roboto,sans-serif;
+    }
+    .font-template-2{
+      font-family: 'Rouge Script', cursive;
+    }
+    #hr{
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(180deg,#0000003d,#0000000d,#0000000d,transparent);
+    }
+    #hr-form{
+      width:90%;
+      margin:auto;
+      border-color:#f8f9faeb;
+      border-style:solid;
+      border-width: 0.5px;
+    }
+    ::placeholder {
+      color: white;
+      opacity: 1; /* Firefox */
+      font-size:18px;
+      font-family: Roboto,sans-serif;
+    }
+  
+  
