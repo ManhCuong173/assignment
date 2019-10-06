@@ -22,7 +22,7 @@
         </div>
         <div class="col-lg-8">
           <div id="list-question-done">
-            <span id='number-question-done'>Câu hỏi số :
+            <span id='number-question-done'>Câu hỏi số : 
               <strong> {{ currentPage }} / {{ questionsArrLength }}</strong> </span>
             <ul class="pagination">
               <li class="page-item" ><a class="page-link" href="javascript:void(0)"
@@ -34,7 +34,7 @@
             <ul style='list-style-type: none;'>
               <li class='mb-2' *ngFor='let answer of item.Answers'>
                 <label for="muhRadio1">
-                  <input type="radio" name = "answer" value="answer.Id" (click) = "sendCorrectAnswer(item.AnswerId, answer.Id,item.Id,numberForOptimize)"/> {{answer.Text}}
+                  <input type="radio" name = "answer" value="answer.Id"/> {{answer.Text}}
                 </label>
               </li>
             </ul>
