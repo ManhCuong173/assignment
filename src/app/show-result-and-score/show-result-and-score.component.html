@@ -7,7 +7,7 @@
       <div id='body-content-frame' class='row'>
         <div class='col-lg-6' id='body-content-left-side'>
           <div class="c100 p25 large">
-            <span>70/100</span>
+            <span>{{ score }}</span>
             <div class="slice">
             </div>
           </div>
@@ -15,24 +15,34 @@
         <div class="col-lg-6">
           <div id="show-result">
             <p>
-              Exam subject name:
+              Tên môn học:
               <span><strong>Lập trình Java</strong></span>
             </p>
             <p>
-              Your score: 
-              <span><strong>70/100</strong></span>
+              Điểm của bạn: 
+              <span><strong>{{ score}}</strong></span>
             </p>
             <p>
-              Your complete: 
-              <span><strong>28/30</strong></span>
+              Số câu hoàn thành: 
+              <span><strong>{{ isDone }} / {{ questionsNumber }}</strong></span>
             </p>
             <p>
-              Date
+              Số câu đúng: 
+              <span><strong>{{ isCorrected }} / {{ questionsNumber }}</strong></span>
+            </p>
+            <p>
+              Ngày :
               <span><strong>{{date}}</strong></span>
+            </p>
+            <p>
+              <span>
+                <i><u>Lưu ý:</u></i> Bạn có thể xem thông tin lịch sử làm bài cùng số điểm tại 
+                <strong><i class="fas fa-user-edit mr-2" >Người dùng</i>/Lịch sử làm bài</strong>
+              </span>
             </p>
           </div>
           <div id="functional-button">
-            <button class='btn btn-success' [routerLink] = "['/user/list']">Home</button>
+            <button class='btn btn-success' (click) = saveResult()>Trang chủ</button>
           </div>
         </div>
       </div>

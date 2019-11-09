@@ -12,6 +12,6 @@ export class ListQuestionService {
   }
 
   public getJSON(subjectId): Observable<any> {
-      return this.http.get(`/assignment/assets/TaiNguyen/db/Quizs/${subjectId}.json`);
+      return this.http.get(`./../../assets/TaiNguyen/db/Quizs/${subjectId}.json`);
   }
 }

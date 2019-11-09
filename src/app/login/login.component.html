@@ -45,9 +45,9 @@
         <div id='hr-form'></div>
         <section id="body-content-right-form-section">
           <form class='form'>
-            <input type="text" id='username' class=' mb-3 py-2 mt-3 ' autocomplete="off" placeholder=" ">
-            <label for="username" >Username</label>            
-            <input type="text" id='password' class=' mb-3 py-2 ' autocomplete="off" placeholder=" ">
+            <input type="text" id='email' class=' mb-3 py-2 mt-3 ' autocomplete="off" placeholder=" " [(ngModel)] = "email" [ngModelOptions] = "{standalone:true}">
+            <label for="email" >Email</label>            
+            <input type="password" id='password' class=' mb-3 py-2 ' autocomplete="off" placeholder=" " [(ngModel)] = "password" [ngModelOptions] = "{standalone:true}">
             <label for="password" >Password</label>
             <button id='submit-form' class='btn py-1 rounded-lg' (click) = navigateToListSubject()> Sign In</button> 
           </form>

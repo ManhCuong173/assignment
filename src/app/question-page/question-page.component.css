@@ -5,6 +5,20 @@
   overflow:hidden;
   padding:0;
 }
+#brand-logo{
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#home{
+  color: #ffff;
+  font-size: 20px;
+  padding: 10px;
+  background:#0000000d;
+  margin-right: 20px;
+  box-shadow: 3px -1px 3px #0000003d;
+}
 #navigation{
   height: 18%;
   width: 100%;
@@ -38,11 +52,22 @@
       background-size:cover;
     }
     .c100{
-      transform: translate(150px, 340px);
-      background:#cccccc00;
+          /* transform: translate(150px,0); */
+    background: #b3d7ff;
+    border-radius: 50%;
+    cursor: pointer;
+    /* float: right; */
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     }
+      .c100::after{
+        background-color: #3b75b7;
+        border-radius: 30px;
+      }
     .c100>span{
-      color:#004085;
+      color:#dee2e6;
     }
     /*Styling clock*/
       #clock{
@@ -174,6 +199,15 @@
   }
   footer div:nth-child(3) {
     background:#75aaa9;
+  }
+
+  .question {
+    font-size: 14px;
+    padding-left: 5%;
+  }
+
+  .answer-section {
+    font-size: 16px;
   }
   /*
   General Class

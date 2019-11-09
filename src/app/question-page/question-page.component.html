@@ -1,8 +1,12 @@
 <div class="container-fluid">
   <header id="navigation" class='row' style='padding:0; margin:0;'>
-
+    <div class="col-lg-2" id='brand-logo'>
+      <a href="javascript:(void)" id='favicon' id='home' (click) = backToHomePage()>
+        Trang chủ
+      </a>
+    </div>
   </header>
-  <section id='body-content' class='row'>
+<section id='body-content' class='row'>
     <div class="col-lg-12">
       <div id="body-content-control-bar">
         <ul id='pagination'>
@@ -12,38 +16,42 @@
       </div>
       <div id='body-content-frame' class='row'>
         <div class='col-lg-4' id='body-content-left-side'>
-          <div class="c100 p25 small">
-            <span>25%</span>
-            <div class="slice">
-              <div class="bar"></div>
-              <div class="fill"></div>
-            </div>
-          </div>
         </div>
         <div class="col-lg-8">
           <div id="list-question-done">
             <span id='number-question-done'>Câu hỏi số : 
               <strong> {{ currentPage }} / {{ questionsArrLength }}</strong> </span>
             <ul class="pagination">
-              <li class="page-item" ><a class="page-link" href="javascript:void(0)"
-                 ></a></li>
-            </ul>
-          </div>
-          <div id="question" *ngFor='let item of questions | paginate: { itemsPerPage: 1, currentPage: currentPage}'>
-            {{ item.Text }}
-            <ul style='list-style-type: none;'>
-              <li class='mb-2' *ngFor='let answer of item.Answers'>
-                <label for="muhRadio1">
-                  <input type="radio" name = "answer" value="answer.Id"/> {{answer.Text}}
-                </label>
+              <li class="page-item" *ngFor = 'let item of answeredArray'>
+                <a class="page-link" href="javascript:void(0)" *ngIf="item.isDone == false" style='background: #ffff; color: #1a1a1a'>
+                  {{item.index}}
+                </a>
+                <a class="page-link" href="javascript:void(0)" *ngIf="item.isDone == true" style='background: #3b75b7; color: #ffff'>
+                  {{item.index}}
+                </a>
               </li>
             </ul>
           </div>
+          <div id="question" *ngFor='let item of questions | paginate: { itemsPerPage: 1, currentPage: currentPage}'>
+            <p class="question">
+              {{ item.Text }}
+            </p>
+            <ul style='list-style-type: none;' class="answer-section">
+              <li class='mb-2' *ngFor='let answer of item.Answers'>
+                <label for="muhRadio1">
+                  <input type="radio" name ="answer" value="answer.Id" (click) = "chooseAnswer(answer.Id, item.Id)" *ngIf= "answer.Id == currentAnswer" class="mr-2" checked/> <span *ngIf= "answer.Id == currentAnswer">{{answer.Text}}</span> 
+                  <input type="radio" name ="answer" value="answer.Id" (click) = "chooseAnswer(answer.Id, item.Id)" *ngIf= "answer.Id != currentAnswer" class="mr-2" /> <span  *ngIf= "answer.Id != currentAnswer">{{answer.Text}}</span>
+                </label>
+              </li>
+            </ul>
+            <div class="c100 p25 small">
+              <span (click) = "submit()">Nộp bài</span>
+            </div>
+          </div>
           <div id="multiply-choice">
             <div id="clock">
-              <i class="fas fa-history"></i> {{ timeStarted }}
+              <i class="fas fa-history mr-2"></i> <countdown #cd1 [config]="{leftTime:  timeStarted}" onload="countDown()"></countdown>
             </div>
-
           </div>
         </div>
       </div>
