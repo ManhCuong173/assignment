@@ -12,7 +12,7 @@ import {RouterHelperService} from './../helpers/router-helper.service'
   providers: [RouterHelperService]
 })
 export class ShowResultAndScoreComponent implements OnInit {
-  createdDate: Date
+  createdDate:Date
   date: string
   score: number;
   isDone: number = 0;
@@ -32,7 +32,7 @@ export class ShowResultAndScoreComponent implements OnInit {
         history.go(1);
     };
   }
-  saveResult(userId) {
+  saveResult() {
     let subjectId: any; 
     this.activatedRoute.queryParams.subscribe(param => subjectId = param.quizId);
     this._listStudents.saveResult(this._cookieSerVice.get('user-id'), subjectId, this.score);

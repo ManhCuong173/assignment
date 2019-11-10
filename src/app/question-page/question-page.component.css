@@ -48,7 +48,7 @@
       Section body content control bar
     */
     #body-content-left-side{
-      background:url(./../../assets/multiply-choice-page/background.jpeg);
+      background:url(/assignment/assets/multiply-choice-page/background.jpeg);
       background-size:cover;
     }
     .c100{

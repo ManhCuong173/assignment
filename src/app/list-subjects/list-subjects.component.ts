@@ -20,6 +20,7 @@ export class ListSubjectsComponent implements OnInit {
   itemStart = 1;
   itemEnd = 3;
   user : any = {};
+  userBirthday: Date;
 
   //Change Password Variables
   password: any;
@@ -44,6 +45,7 @@ export class ListSubjectsComponent implements OnInit {
 
     this._listUser.getJSON(this.idUser).subscribe(data => {
       this.user = data;
+      this.userBirthday = this.user.birthday;
       this.user.gender?this.user.gender='male':this.user.gender='female';
       this._elementRef.nativeElement.querySelector(`#${this.user.gender}`).checked = true;
     })
@@ -121,6 +123,7 @@ export class ListSubjectsComponent implements OnInit {
   changeInfo(){
     if(this.user.gender=='male') this.user.gender = true
     else this.user.gender = false;
+    this.user.birthday = this.userBirthday;
     this._listUser.changeInfo(this.user).subscribe(data => {
       alert('Thay đổi thông tin thành công');
     })
