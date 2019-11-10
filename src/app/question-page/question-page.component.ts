@@ -36,7 +36,7 @@ export class QuestionPageComponent implements OnInit {
   score: number = 0;
 
   //Clock
-  timeStarted:number = 5;
+  timeStarted:number = 3600;
   clockStart:any;
 
   //User Id

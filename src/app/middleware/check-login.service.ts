@@ -17,6 +17,7 @@ export class CheckLoginService {
 
    isLogin(userid: string): void {
     if(userid) return;
+    alert('Bạn cần phải đăng nhập trước khi vào trang danh sách môn học')
     this._router.navigate(['']);
    };
 

@@ -20,6 +20,7 @@ export class ListSubjectsComponent implements OnInit {
   itemStart = 1;
   itemEnd = 3;
   user : any = {};
+  users: any = [];
   userBirthday: Date;
 
   //Change Password Variables
@@ -121,11 +122,21 @@ export class ListSubjectsComponent implements OnInit {
 
   //Change infomartion of user
   changeInfo(){
-    if(this.user.gender=='male') this.user.gender = true
-    else this.user.gender = false;
-    this.user.birthday = this.userBirthday;
-    this._listUser.changeInfo(this.user).subscribe(data => {
-      alert('Thay đổi thông tin thành công');
+    let isUsed = false;
+    this._listUser.allUser().subscribe(data => {
+      this.users = data;
+      this.users.forEach(element => {
+        if(this.user.email == element.email) isUsed = !isUsed;
+      });
+    if(isUsed) alert("Email này đã có người sử dụng");
+    else {
+      if(this.user.gender=='male') this.user.gender = true
+          else this.user.gender = false;
+          this.user.birthday = this.userBirthday;
+          this._listUser.changeInfo(this.user).subscribe(data => {
+            alert('Thay đổi thông tin thành công');
+          });
+    }
     })
   }
 
